@@ -1,0 +1,329 @@
+== Tool checks ==
+[PASS] git installed
+[PASS] docker installed
+[PASS] node installed
+[PASS] python installed
+\n== Docker checks ==
+Docker version 28.0.4, build b8034c0
+[PASS] docker CLI
+Docker Compose version v2.38.2
+[PASS] docker compose v2
+Client: Docker Engine - Community
+ Version:    28.0.4
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.33.0
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.38.2
+    Path:     /usr/libexec/docker/cli-plugins/docker-compose
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 7
+ Server Version: 28.0.4
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: false
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 301b2dac98f15c27117da5c8af12118a041a31d9
+ runc version: v1.3.4-0-gd6d73eb8
+ init version: de40ad0
+ Security Options:
+  apparmor
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.17.0-1010-azure
+ Operating System: Ubuntu 24.04.4 LTS
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 4
+ Total Memory: 15.61GiB
+ Name: runnervmeorf1
+ ID: e27c7740-8587-4822-9bec-fa47c65630a3
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Username: githubactions
+ Experimental: false
+ Insecure Registries:
+  ::1/128
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+[PASS] docker daemon ready
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+[PASS] hello-world container
+\n== Image checks ==
+[WARN] missing image registry:2; run scripts/pull_all.sh
+[WARN] missing image python:3.11-slim; run scripts/pull_all.sh
+[WARN] missing image node:20-alpine; run scripts/pull_all.sh
+[WARN] missing image postgres:15-alpine; run scripts/pull_all.sh
+[WARN] missing image rabbitmq:3-management; run scripts/pull_all.sh
+[WARN] missing image eclipse-mosquitto:2; run scripts/pull_all.sh
+[WARN] missing image nginx:alpine; run scripts/pull_all.sh
+[WARN] missing image traefik:v3.1; run scripts/pull_all.sh
+[WARN] missing image prom/prometheus:v2.54.1; run scripts/pull_all.sh
+[WARN] missing image grafana/grafana:11.2.0; run scripts/pull_all.sh
+[WARN] missing image redis:7-alpine; run scripts/pull_all.sh
+[WARN] missing image swaggerapi/swagger-ui:v5.17.14; run scripts/pull_all.sh
+[PASS] image hello-world:latest
+[WARN] missing image ultralytics/ultralytics:latest-cpu; run scripts/pull_all.sh
+\n== Ultralytics check ==
+[WARN] skip ultralytics check because image is missing
+\n== Compose mini-stack check ==
+ nginx Pulling 
+ registry Pulling 
+ redis Pulling 
+ 897d797d2723 Pulling fs layer 
+ c14c7509f545 Pulling fs layer 
+ f546396032e0 Pulling fs layer 
+ a300455a02bb Pulling fs layer 
+ 941ebb020cf0 Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ 677c7c5aa821 Pulling fs layer 
+ a300455a02bb Waiting 
+ 941ebb020cf0 Waiting 
+ 4f4fb700ef54 Waiting 
+ 677c7c5aa821 Waiting 
+ 44cf07d57ee4 Pulling fs layer 
+ bbbdd6c6894b Pulling fs layer 
+ 8e82f80af0de Pulling fs layer 
+ 3493bf46cdec Pulling fs layer 
+ 6d464ea18732 Pulling fs layer 
+ bbbdd6c6894b Waiting 
+ 8e82f80af0de Waiting 
+ 3493bf46cdec Waiting 
+ 6d464ea18732 Waiting 
+ 44cf07d57ee4 Waiting 
+ 6a0ac1617861 Pulling fs layer 
+ 82736a35d0e7 Pulling fs layer 
+ 583599bb7d38 Pulling fs layer 
+ aee4e54b3865 Pulling fs layer 
+ 781ff50d2644 Pulling fs layer 
+ 453da7dbc73e Pulling fs layer 
+ 4a8b0b2a5b19 Pulling fs layer 
+ 612c0c1df4c5 Pulling fs layer 
+ 6a0ac1617861 Waiting 
+ 781ff50d2644 Waiting 
+ 82736a35d0e7 Waiting 
+ 453da7dbc73e Waiting 
+ 583599bb7d38 Waiting 
+ aee4e54b3865 Waiting 
+ 4a8b0b2a5b19 Waiting 
+ 612c0c1df4c5 Waiting 
+ c14c7509f545 Downloading [===================>                               ]     374B/948B
+ c14c7509f545 Downloading [==================================================>]     948B/948B
+ c14c7509f545 Verifying Checksum 
+ c14c7509f545 Download complete 
+ 897d797d2723 Downloading [>                                                  ]  37.43kB/3.647MB
+ f546396032e0 Downloading [>                                                  ]  3.129kB/194.9kB
+ f546396032e0 Verifying Checksum 
+ f546396032e0 Download complete 
+ 897d797d2723 Downloading [==================================================>]  3.647MB/3.647MB
+ 897d797d2723 Verifying Checksum 
+ 897d797d2723 Download complete 
+ 897d797d2723 Extracting [>                                                  ]  65.54kB/3.647MB
+ a300455a02bb Downloading [>                                                  ]  125.8kB/12.41MB
+ 941ebb020cf0 Downloading [==================================================>]     101B/101B
+ 941ebb020cf0 Download complete 
+ 897d797d2723 Extracting [==================================================>]  3.647MB/3.647MB
+ 897d797d2723 Extracting [==================================================>]  3.647MB/3.647MB
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Verifying Checksum 
+ 4f4fb700ef54 Download complete 
+ 897d797d2723 Pull complete 
+ c14c7509f545 Extracting [==================================================>]     948B/948B
+ c14c7509f545 Extracting [==================================================>]     948B/948B
+ c14c7509f545 Pull complete 
+ f546396032e0 Extracting [========>                                          ]  32.77kB/194.9kB
+ f546396032e0 Extracting [==================================================>]  194.9kB/194.9kB
+ f546396032e0 Extracting [==================================================>]  194.9kB/194.9kB
+ a300455a02bb Downloading [===========================================>       ]   10.7MB/12.41MB
+ 677c7c5aa821 Downloading [================================>                  ]     394B/603B
+ 677c7c5aa821 Downloading [==================================================>]     603B/603B
+ 677c7c5aa821 Verifying Checksum 
+ 677c7c5aa821 Download complete 
+ 44cf07d57ee4 Downloading [>                                                  ]  34.75kB/3.418MB
+ a300455a02bb Downloading [==================================================>]  12.41MB/12.41MB
+ a300455a02bb Verifying Checksum 
+ a300455a02bb Download complete 
+ 44cf07d57ee4 Download complete 
+ 44cf07d57ee4 Extracting [>                                                  ]  65.54kB/3.418MB
+ bbbdd6c6894b Downloading [>                                                  ]  3.068kB/295.7kB
+ bbbdd6c6894b Downloading [==================================================>]  295.7kB/295.7kB
+ bbbdd6c6894b Verifying Checksum 
+ bbbdd6c6894b Download complete 
+ f546396032e0 Pull complete 
+ 44cf07d57ee4 Extracting [==================================================>]  3.418MB/3.418MB
+ a300455a02bb Extracting [>                                                  ]  131.1kB/12.41MB
+ 8e82f80af0de Downloading [>                                                  ]  66.59kB/6.404MB
+ 3493bf46cdec Downloading [==================================================>]     370B/370B
+ 3493bf46cdec Verifying Checksum 
+ 3493bf46cdec Download complete 
+ 8e82f80af0de Verifying Checksum 
+ 8e82f80af0de Download complete 
+ 44cf07d57ee4 Pull complete 
+ bbbdd6c6894b Extracting [=====>                                             ]  32.77kB/295.7kB
+ 6d464ea18732 Downloading [==================================================>]     213B/213B
+ 6d464ea18732 Verifying Checksum 
+ 6d464ea18732 Download complete 
+ a300455a02bb Extracting [=================>                                 ]  4.325MB/12.41MB
+ bbbdd6c6894b Extracting [==================================================>]  295.7kB/295.7kB
+ 6a0ac1617861 Downloading [>                                                  ]  38.88kB/3.864MB
+ 82736a35d0e7 Downloading [>                                                  ]  19.54kB/1.871MB
+ 82736a35d0e7 Download complete 
+ 583599bb7d38 Downloading [===============================>                   ]     393B/627B
+ 583599bb7d38 Downloading [==================================================>]     627B/627B
+ 583599bb7d38 Verifying Checksum 
+ 583599bb7d38 Download complete 
+ 6a0ac1617861 Verifying Checksum 
+ 6a0ac1617861 Download complete 
+ 6a0ac1617861 Extracting [>                                                  ]  65.54kB/3.864MB
+ a300455a02bb Extracting [======================================>            ]  9.568MB/12.41MB
+ bbbdd6c6894b Pull complete 
+ 8e82f80af0de Extracting [>                                                  ]  65.54kB/6.404MB
+ 781ff50d2644 Downloading [================================================>  ]     393B/404B
+ 781ff50d2644 Downloading [==================================================>]     404B/404B
+ 453da7dbc73e Downloading [================>                                  ]     392B/1.21kB
+ aee4e54b3865 Downloading [===================>                               ]     373B/956B
+ 453da7dbc73e Downloading [==================================================>]   1.21kB/1.21kB
+ 781ff50d2644 Verifying Checksum 
+ 453da7dbc73e Verifying Checksum 
+ 453da7dbc73e Download complete 
+ aee4e54b3865 Downloading [==================================================>]     956B/956B
+ aee4e54b3865 Verifying Checksum 
+ aee4e54b3865 Download complete 
+ 781ff50d2644 Download complete 
+ 6a0ac1617861 Extracting [=================>                                 ]  1.376MB/3.864MB
+ a300455a02bb Extracting [==================================================>]  12.41MB/12.41MB
+ 8e82f80af0de Extracting [===================================>               ]  4.588MB/6.404MB
+ a300455a02bb Pull complete 
+ 941ebb020cf0 Extracting [==================================================>]     101B/101B
+ 941ebb020cf0 Extracting [==================================================>]     101B/101B
+ 6a0ac1617861 Extracting [==================================================>]  3.864MB/3.864MB
+ 941ebb020cf0 Pull complete 
+ 6a0ac1617861 Extracting [==================================================>]  3.864MB/3.864MB
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 8e82f80af0de Extracting [==================================================>]  6.404MB/6.404MB
+ 4f4fb700ef54 Pull complete 
+ 677c7c5aa821 Extracting [==================================================>]     603B/603B
+ 677c7c5aa821 Extracting [==================================================>]     603B/603B
+ 8e82f80af0de Pull complete 
+ 3493bf46cdec Extracting [==================================================>]     370B/370B
+ 3493bf46cdec Extracting [==================================================>]     370B/370B
+ 4a8b0b2a5b19 Downloading [=============>                                     ]     372B/1.399kB
+ 4a8b0b2a5b19 Downloading [==================================================>]  1.399kB/1.399kB
+ 4a8b0b2a5b19 Verifying Checksum 
+ 4a8b0b2a5b19 Download complete 
+ 677c7c5aa821 Pull complete 
+ 3493bf46cdec Pull complete 
+ 6d464ea18732 Extracting [==================================================>]     213B/213B
+ 6d464ea18732 Extracting [==================================================>]     213B/213B
+ redis Pulled 
+ 6a0ac1617861 Pull complete 
+ 82736a35d0e7 Extracting [>                                                  ]  32.77kB/1.871MB
+ 612c0c1df4c5 Downloading [>                                                  ]    206kB/20.25MB
+ 6d464ea18732 Pull complete 
+ registry Pulled 
+ 82736a35d0e7 Extracting [==================================================>]  1.871MB/1.871MB
+ 612c0c1df4c5 Downloading [==================================================>]  20.25MB/20.25MB
+ 612c0c1df4c5 Verifying Checksum 
+ 612c0c1df4c5 Download complete 
+ 82736a35d0e7 Pull complete 
+ 583599bb7d38 Extracting [==================================================>]     627B/627B
+ 583599bb7d38 Extracting [==================================================>]     627B/627B
+ 583599bb7d38 Pull complete 
+ aee4e54b3865 Extracting [==================================================>]     956B/956B
+ aee4e54b3865 Extracting [==================================================>]     956B/956B
+ aee4e54b3865 Pull complete 
+ 781ff50d2644 Extracting [==================================================>]     404B/404B
+ 781ff50d2644 Extracting [==================================================>]     404B/404B
+ 781ff50d2644 Pull complete 
+ 453da7dbc73e Extracting [==================================================>]   1.21kB/1.21kB
+ 453da7dbc73e Extracting [==================================================>]   1.21kB/1.21kB
+ 453da7dbc73e Pull complete 
+ 4a8b0b2a5b19 Extracting [==================================================>]  1.399kB/1.399kB
+ 4a8b0b2a5b19 Extracting [==================================================>]  1.399kB/1.399kB
+ 4a8b0b2a5b19 Pull complete 
+ 612c0c1df4c5 Extracting [>                                                  ]  229.4kB/20.25MB
+ 612c0c1df4c5 Extracting [==============>                                    ]  5.734MB/20.25MB
+ 612c0c1df4c5 Extracting [=================================>                 ]  13.76MB/20.25MB
+ 612c0c1df4c5 Extracting [==================================================>]  20.25MB/20.25MB
+ 612c0c1df4c5 Pull complete 
+ nginx Pulled 
+ Network compose_default  Creating
+ Network compose_default  Created
+ Container compose-nginx-1  Creating
+ Container compose-registry-1  Creating
+ Container compose-redis-1  Creating
+ Container compose-redis-1  Created
+ Container compose-nginx-1  Created
+ Container compose-registry-1  Created
+ Container compose-nginx-1  Starting
+ Container compose-registry-1  Starting
+ Container compose-redis-1  Starting
+ Container compose-redis-1  Started
+ Container compose-registry-1  Started
+ Container compose-nginx-1  Started
+NAME                 IMAGE            COMMAND                  SERVICE    CREATED         STATUS                   PORTS
+compose-nginx-1      nginx:alpine     "/docker-entrypoint.…"   nginx      5 seconds ago   Up 5 seconds (healthy)   0.0.0.0:8081->80/tcp, [::]:8081->80/tcp
+compose-redis-1      redis:7-alpine   "docker-entrypoint.s…"   redis      5 seconds ago   Up 5 seconds (healthy)   6379/tcp
+compose-registry-1   registry:2       "/entrypoint.sh /etc…"   registry   5 seconds ago   Up 5 seconds             0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp
+[PASS] nginx reachable on localhost:8081
+[PASS] local registry reachable on localhost:5000
+ Container compose-registry-1  Stopping
+ Container compose-redis-1  Stopping
+ Container compose-nginx-1  Stopping
+ Container compose-registry-1  Stopped
+ Container compose-registry-1  Removing
+ Container compose-registry-1  Removed
+ Container compose-nginx-1  Stopped
+ Container compose-nginx-1  Removing
+ Container compose-nginx-1  Removed
+ Container compose-redis-1  Stopped
+ Container compose-redis-1  Removing
+ Container compose-redis-1  Removed
+ Network compose_default  Removing
+ Network compose_default  Removed
+\nALL CHECKS FINISHED. Read evidence/buoi-01/smoke-test-result.txt for details.

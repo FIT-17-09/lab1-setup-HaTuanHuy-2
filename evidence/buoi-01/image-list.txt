@@ -1,0 +1,8 @@
+REPOSITORY:TAG                                      IMAGE ID       SIZE
+ghcr.io/dependabot/dependabot-updater-core:latest   bc43b78d01f2   798MB
+ghcr.io/github/gh-aw-mcpg:latest                    4f3a2fdcf421   64.4MB
+ghcr.io/github/gh-aw-firewall/agent:latest          1e3e582066a8   507MB
+ghcr.io/github/gh-aw-firewall/api-proxy:latest      da031122e287   170MB
+hello-world:latest                                  e2ac70e7319a   10.1kB
+ghcr.io/github/gh-aw-firewall/squid:latest          53e4356ca7b1   231MB
+ghcr.io/github/github-mcp-server:latest             5b7da589d110   41.2MB
